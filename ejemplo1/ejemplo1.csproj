@@ -46,12 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dominio\Disco.cs" />
+    <Compile Include="Dominio\Estilo.cs" />
+    <Compile Include="Dominio\TipoEdicion.cs" />
+    <Compile Include="Negocio\AccesoDatos.cs" />
+    <Compile Include="Negocio\DiscoNegocio.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Negocio\EstiloNegocio.cs" />
+    <Compile Include="Negocio\TipoEdicionNegocio.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

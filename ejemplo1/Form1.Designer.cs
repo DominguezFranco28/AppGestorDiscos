@@ -28,34 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.dgvDiscos = new System.Windows.Forms.DataGridView();
+            this.pbxDisco = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDiscos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxDisco)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // dgvDiscos
             // 
-            this.button1.Location = new System.Drawing.Point(381, 176);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.dgvDiscos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDiscos.Location = new System.Drawing.Point(24, 26);
+            this.dgvDiscos.Name = "dgvDiscos";
+            this.dgvDiscos.Size = new System.Drawing.Size(504, 318);
+            this.dgvDiscos.TabIndex = 0;
+            this.dgvDiscos.SelectionChanged += new System.EventHandler(this.dgvDiscos_SelectionChanged);
+            // 
+            // pbxDisco
+            // 
+            this.pbxDisco.Location = new System.Drawing.Point(568, 26);
+            this.pbxDisco.Name = "pbxDisco";
+            this.pbxDisco.Size = new System.Drawing.Size(367, 318);
+            this.pbxDisco.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxDisco.TabIndex = 1;
+            this.pbxDisco.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 480);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(975, 415);
+            this.Controls.Add(this.pbxDisco);
+            this.Controls.Add(this.dgvDiscos);
             this.Name = "Form1";
             this.Text = "Primera APP";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDiscos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxDisco)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dgvDiscos;
+        private System.Windows.Forms.PictureBox pbxDisco;
     }
 }
 
