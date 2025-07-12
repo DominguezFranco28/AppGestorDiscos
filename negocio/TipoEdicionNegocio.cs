@@ -1,4 +1,5 @@
-﻿using ejemplo1.Dominio;
+﻿
+using dominio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,23 +7,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace ejemplo1.Negocio
+namespace negocio
 {
-    class EstiloNegocio
+    public class TipoEdicionNegocio
     {
-        public List<Estilo> listar()
-		{
-			List<Estilo> lista = new List<Estilo>();
-		    AccesoDatos datos = new AccesoDatos();
+        public List<TipoEdicion> listar()
+        {
+            List<TipoEdicion> lista = new List<TipoEdicion>();
+            AccesoDatos datos = new AccesoDatos();
 
             try
             {
-                datos.setearConsulta("Select Id, Descripcion From ESTILOS");
+                datos.setearConsulta("Select Id, Descripcion From TIPOSEDICION");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
                 {
-                    Estilo aux = new Estilo();
+                    TipoEdicion aux = new TipoEdicion();
                     aux.Id = (int)datos.Lector["Id"];
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
 
@@ -42,3 +43,4 @@ namespace ejemplo1.Negocio
         }
     }
 }
+

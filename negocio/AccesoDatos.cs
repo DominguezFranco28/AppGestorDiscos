@@ -5,27 +5,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ejemplo1
-{
-    class AccesoDatos
+namespace negocio
+{  
+   public class AccesoDatos
     {
         private SqlConnection conexion;
         private SqlCommand comando;
         private SqlDataReader lector;
-        public SqlDataReader Lector
-        {
-            get { return lector; }
-        }
-
         public AccesoDatos()
         {
             conexion = new SqlConnection("server=.\\SQLEXPRESS; database=DISCOS_DB; integrated security=true");
             comando = new SqlCommand();
+            //consturctor d ela clase que permite la conexion de datos, para cuando sea llamada d eotro objeto
+            //el lector no va en el construccion porque no se puede instanciar esa clase
+        }
+        public SqlDataReader Lector
+        {
+            get { return lector; } //prop para leer el lectr desde el exterior
         }
 
         public void setearConsulta(string consulta)
         {
-            comando.CommandType = System.Data.CommandType.Text;
+            comando.CommandType = System.Data.CommandType.Text; //sentencia sql que quiero usar, tipo text el mas comun
             comando.CommandText = consulta;
         }
 
@@ -35,7 +36,7 @@ namespace ejemplo1
             try
             {
                 conexion.Open();
-                lector = comando.ExecuteReader();
+                lector = comando.ExecuteReader(); //devuelve un SqlDataReader, se asigna a la variable lector
             }
             catch (Exception ex)
             {
