@@ -45,7 +45,7 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Location = new System.Drawing.Point(61, 44);
+            this.lblTitulo.Location = new System.Drawing.Point(40, 44);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(33, 13);
             this.lblTitulo.TabIndex = 0;
@@ -54,7 +54,7 @@
             // lblEstilo
             // 
             this.lblEstilo.AutoSize = true;
-            this.lblEstilo.Location = new System.Drawing.Point(61, 116);
+            this.lblEstilo.Location = new System.Drawing.Point(40, 116);
             this.lblEstilo.Name = "lblEstilo";
             this.lblEstilo.Size = new System.Drawing.Size(32, 13);
             this.lblEstilo.TabIndex = 0;
@@ -63,7 +63,7 @@
             // lblTipo
             // 
             this.lblTipo.AutoSize = true;
-            this.lblTipo.Location = new System.Drawing.Point(61, 150);
+            this.lblTipo.Location = new System.Drawing.Point(40, 150);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(31, 13);
             this.lblTipo.TabIndex = 0;
@@ -71,7 +71,7 @@
             // 
             // txtTitulo
             // 
-            this.txtTitulo.Location = new System.Drawing.Point(135, 44);
+            this.txtTitulo.Location = new System.Drawing.Point(114, 44);
             this.txtTitulo.Name = "txtTitulo";
             this.txtTitulo.Size = new System.Drawing.Size(100, 20);
             this.txtTitulo.TabIndex = 0;
@@ -79,7 +79,7 @@
             // lblImagen
             // 
             this.lblImagen.AutoSize = true;
-            this.lblImagen.Location = new System.Drawing.Point(61, 78);
+            this.lblImagen.Location = new System.Drawing.Point(40, 78);
             this.lblImagen.Name = "lblImagen";
             this.lblImagen.Size = new System.Drawing.Size(58, 13);
             this.lblImagen.TabIndex = 3;
@@ -87,14 +87,15 @@
             // 
             // txtUrlImagen
             // 
-            this.txtUrlImagen.Location = new System.Drawing.Point(135, 78);
+            this.txtUrlImagen.Location = new System.Drawing.Point(114, 78);
             this.txtUrlImagen.Name = "txtUrlImagen";
             this.txtUrlImagen.Size = new System.Drawing.Size(100, 20);
             this.txtUrlImagen.TabIndex = 1;
+            this.txtUrlImagen.Leave += new System.EventHandler(this.txtUrlImagen_Leave);
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.Location = new System.Drawing.Point(48, 208);
+            this.btnConfirmar.Location = new System.Drawing.Point(27, 206);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(75, 23);
             this.btnConfirmar.TabIndex = 4;
@@ -104,7 +105,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(160, 208);
+            this.btnCancelar.Location = new System.Drawing.Point(139, 206);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 5;
@@ -116,25 +117,26 @@
             // 
             this.cbxEstilo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxEstilo.FormattingEnabled = true;
-            this.cbxEstilo.Location = new System.Drawing.Point(135, 116);
+            this.cbxEstilo.Location = new System.Drawing.Point(114, 116);
             this.cbxEstilo.Name = "cbxEstilo";
-            this.cbxEstilo.Size = new System.Drawing.Size(121, 21);
+            this.cbxEstilo.Size = new System.Drawing.Size(100, 21);
             this.cbxEstilo.TabIndex = 2;
             // 
             // cbxTipo
             // 
             this.cbxTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxTipo.FormattingEnabled = true;
-            this.cbxTipo.Location = new System.Drawing.Point(135, 150);
+            this.cbxTipo.Location = new System.Drawing.Point(114, 150);
             this.cbxTipo.Name = "cbxTipo";
-            this.cbxTipo.Size = new System.Drawing.Size(121, 21);
+            this.cbxTipo.Size = new System.Drawing.Size(100, 21);
             this.cbxTipo.TabIndex = 3;
             // 
             // pbxImagenAltaDisco
             // 
-            this.pbxImagenAltaDisco.Location = new System.Drawing.Point(300, 32);
+            this.pbxImagenAltaDisco.Location = new System.Drawing.Point(273, 32);
             this.pbxImagenAltaDisco.Name = "pbxImagenAltaDisco";
-            this.pbxImagenAltaDisco.Size = new System.Drawing.Size(163, 163);
+            this.pbxImagenAltaDisco.Size = new System.Drawing.Size(186, 179);
+            this.pbxImagenAltaDisco.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxImagenAltaDisco.TabIndex = 6;
             this.pbxImagenAltaDisco.TabStop = false;
             // 
