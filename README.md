@@ -12,3 +12,7 @@ Incluye funcionalidades para filtrar, agregar, modificar y eliminar registros de
 
 ## Ventana Eliminación
 ![Eliminación](screenshots/EliminacionFisica/EliminacionDisco.png)
+
+## Ventana Eliminación (Lógica)
+![EliminaciónlOGICA](screenshots/EliminacionLogica/DiscoEliminado(Logica, aun en BD).png)
+
