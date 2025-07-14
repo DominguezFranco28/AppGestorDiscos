@@ -98,7 +98,7 @@ namespace ejemplo1
             DiscoNegocio negocio = new DiscoNegocio();
             try
             {
-                DialogResult respuesta = MessageBox.Show("Desea eliminar el Disco?", "Eliminando Objeto", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult respuesta = MessageBox.Show("¿Desea eliminar el Disco?", "Eliminando Objeto", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (respuesta == DialogResult.Yes)
                 {
                     if (logico)
@@ -110,7 +110,7 @@ namespace ejemplo1
                         negocio.eliminar(discoSeleccionado);
                     }
                     cargar();
-                    MessageBox.Show("Disco (Logico) Eliminado", "Eliminación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Disco eliminado", "Eliminación", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
             }
