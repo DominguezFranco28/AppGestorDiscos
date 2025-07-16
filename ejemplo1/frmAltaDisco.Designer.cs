@@ -39,6 +39,7 @@
             this.cbxEstilo = new System.Windows.Forms.ComboBox();
             this.cbxTipo = new System.Windows.Forms.ComboBox();
             this.pbxImagenAltaDisco = new System.Windows.Forms.PictureBox();
+            this.btnAgregarImagen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagenAltaDisco)).BeginInit();
             this.SuspendLayout();
             // 
@@ -140,11 +141,22 @@
             this.pbxImagenAltaDisco.TabIndex = 6;
             this.pbxImagenAltaDisco.TabStop = false;
             // 
+            // btnAgregarImagen
+            // 
+            this.btnAgregarImagen.Location = new System.Drawing.Point(220, 78);
+            this.btnAgregarImagen.Name = "btnAgregarImagen";
+            this.btnAgregarImagen.Size = new System.Drawing.Size(47, 23);
+            this.btnAgregarImagen.TabIndex = 7;
+            this.btnAgregarImagen.Text = "+";
+            this.btnAgregarImagen.UseVisualStyleBackColor = true;
+            this.btnAgregarImagen.Click += new System.EventHandler(this.btnImagen_Click);
+            // 
             // frmAltaDisco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(516, 255);
+            this.Controls.Add(this.btnAgregarImagen);
             this.Controls.Add(this.pbxImagenAltaDisco);
             this.Controls.Add(this.cbxTipo);
             this.Controls.Add(this.cbxEstilo);
@@ -181,5 +193,6 @@
         private System.Windows.Forms.ComboBox cbxEstilo;
         private System.Windows.Forms.ComboBox cbxTipo;
         private System.Windows.Forms.PictureBox pbxImagenAltaDisco;
+        private System.Windows.Forms.Button btnAgregarImagen;
     }
 }

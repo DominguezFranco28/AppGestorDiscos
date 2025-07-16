@@ -119,7 +119,42 @@ namespace ejemplo1
                 MessageBox.Show(ex.ToString());
             }
         }
-
+        private bool validarFiltro()
+        {
+            if (cboCampo.SelectedIndex <0){
+                MessageBox.Show("Por favor, seleccione el campo para filtrar");
+                return true;
+            }
+            if (cboCriterio.SelectedIndex < 0)
+            {
+                MessageBox.Show("Por favor, seleccione el criterio para filtrar");
+                return true;
+            }
+            if (cboCampo.SelectedItem.ToString() == "Id Disco")
+            {
+                if (string.IsNullOrEmpty(txtFiltroAvanzado.Text))
+                { 
+                    MessageBox.Show("Debes cargar el filtro (solo númericos)!");
+                    return true;
+                }
+                if (!(validarNumeros(txtFiltroAvanzado.Text)))  //si no son son numeros...
+                { 
+                    MessageBox.Show("Por favor, escriba solo números para filtrar por un campo númerico..");
+                    return true; 
+                }             
+            }
+                
+            return false;
+        }
+        private bool validarNumeros(string cadena)
+        {
+            foreach (char caracter in cadena) //ciclo foreach para recorrer cada caracter dentro del texto del filtro. Si encuentra alguno que no sea numero, retorna falso
+            {
+                if (!(char.IsNumber(caracter))) //si el caracter NO es un numero..
+                        return false;
+            }
+            return true;
+        }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             frmAltaDisco frmAlta = new frmAltaDisco();
@@ -163,9 +198,12 @@ namespace ejemplo1
 
         private void btnFiltro_Click(object sender, EventArgs e)
         {
+        
             DiscoNegocio negocio = new DiscoNegocio();
             try
             {
+                if (validarFiltro())
+                    return; ; //chequea las validaciones preestablecidas, si alguna retorna true, se sale del try
             string campo = cboCampo.SelectedItem.ToString();
             string criterio = cboCriterio.SelectedItem.ToString();
             string filtro = txtFiltroAvanzado.Text;
